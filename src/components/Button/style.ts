@@ -1,13 +1,15 @@
 import styled from "styled-components";
-import { colorType, sizesType } from "../../types";
+import { colorType, sizesType, iconType } from "../../types/types";
 import { sizes, colors } from "../../styles/utils";
+import onlineTheme from "../../themes/online";
 
 interface Props {
    color?: colorType;
    size?: sizesType;
+   icon?: iconType;
 }
 
-const StyledButton: React.FunctionComponent<Props> = styled.button`
+export const SButton: React.FunctionComponent<Props> = styled.button`
    border: transparent;
    color: ${(props: Props) =>
       props.color ? colors[props.color] : colors.primary};
@@ -25,16 +27,31 @@ const StyledButton: React.FunctionComponent<Props> = styled.button`
    border-radius: 3px;
    outline: none;
    transition: background 0.2s, color 0.2s;
-   span {
-      position: relative;
-      left: 5px;
-      top: 1px;
-   }
+
    &:hover {
       background: ${(props: Props) =>
          props.color ? colors[props.color] : colors.primary};
       color: white;
       cursor: pointer;
+      .icon {
+         background-color: white;
+      }
    }
 `;
-export default StyledButton;
+
+export const Sicon = styled.span`
+   background-size: cover;
+   display: inline-block;
+   position: relative;
+   left: 5px;
+   top: 2.5px;
+   width: 1rem;
+   height: 1rem;
+   background-color: ${(props: Props) =>
+      props.color
+         ? onlineTheme.colors[props.color]
+         : onlineTheme.colors.primary};
+   mask: ${(props: Props) =>
+      props.icon && `url(${onlineTheme.icons[props.icon]}) `};
+   mask-repeat: no-repeat;
+`;

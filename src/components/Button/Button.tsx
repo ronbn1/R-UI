@@ -1,31 +1,6 @@
 import React from "react";
-import StyledButton from "./Button-style";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { colorType, sizesType, iconType } from "../../types";
-import { icons } from "../../styles/utils";
-
-import { library } from "@fortawesome/fontawesome-svg-core";
-import {
-   faArrowDown,
-   faArrowUp,
-   faArrowRight,
-   faArrowLeft,
-   faPlusCircle,
-   faHeart,
-   faSmile,
-   faTrash,
-} from "@fortawesome/free-solid-svg-icons";
-
-library.add(
-   faArrowUp,
-   faArrowRight,
-   faArrowLeft,
-   faPlusCircle,
-   faArrowDown,
-   faSmile,
-   faHeart,
-   faTrash
-);
+import { SButton, Sicon } from "./style";
+import { colorType, sizesType, iconType } from "../../types/types";
 
 interface Props {
    text: string;
@@ -36,12 +11,10 @@ interface Props {
 
 const Button = (props: Props) => {
    return (
-      <StyledButton color={props.color} size={props.size}>
+      <SButton color={props.color} size={props.size} icon={props.icon}>
          {props.text}
-         <span>
-            {props.icon ? <FontAwesomeIcon icon={icons[props.icon]} /> : ""}
-         </span>
-      </StyledButton>
+         {props.icon && <Sicon className="icon" icon={props.icon} />}
+      </SButton>
    );
 };
 
