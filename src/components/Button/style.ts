@@ -39,7 +39,7 @@ export const SButton: React.FunctionComponent<Props> = styled.button`
    }
 `;
 
-export const Sicon = styled.span`
+export const SIcon = styled.span`
    background-size: cover;
    display: inline-block;
    position: relative;

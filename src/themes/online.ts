@@ -37,13 +37,13 @@ const onlineTheme: {
       light: string;
    };
    icons: {
-      add: any;
-      delete: any;
-      like: any;
-      down: any;
-      right: any;
-      left: any;
-      up: any;
+      plus: any;
+      trash: any;
+      heart: any;
+      downArrow: any;
+      rightArrow: any;
+      leftArrow: any;
+      upArrow: any;
       smile: any;
    };
 } = {
@@ -77,13 +77,13 @@ const onlineTheme: {
       light: "#e0fbfc",
    },
    icons: {
-      add: plus,
-      delete: trash,
-      like: heart,
-      down: downArrow,
-      right: rightArrow,
-      left: leftArrow,
-      up: upArrow,
+      plus: plus,
+      trash: trash,
+      heart: heart,
+      downArrow: downArrow,
+      rightArrow: rightArrow,
+      leftArrow: leftArrow,
+      upArrow: upArrow,
       smile: smile,
    },
 };

@@ -34,13 +34,14 @@ export const TextButton = () => {
 export const iconButton = () => {
    return (
       <>
-         <Button size="s" text="click me" icon="add" />
-         <Button size="s" text="click me" icon="delete" />
-         <Button size="s" text="click me" icon="up" />
-         <Button size="s" text="click me" icon="right" />
-         <Button size="s" text="click me" icon="down" />
-         <Button size="s" text="click me" icon="left" />
-         <Button size="s" text="click me" icon="like" />
+         <Button size="s" text="click me" icon="plus" />
+         <Button size="s" text="click me" icon="trash" />
+         <Button size="s" text="click me" icon="upArrow" />
+         <Button size="s" text="click me" icon="rightArrow" />
+         <Button size="s" text="click me" icon="downArrow" />
+         <Button size="s" text="click me" icon="leftArrow" />
+         <Button size="s" text="click me" icon="heart" />
+         <Button size="s" text="click me" icon="smile" />
       </>
    );
 };

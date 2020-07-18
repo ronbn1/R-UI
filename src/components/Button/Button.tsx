@@ -1,19 +1,19 @@
 import React from "react";
-import { SButton, Sicon } from "./style";
+import { SButton, SIcon } from "./style";
 import { colorType, sizesType, iconType } from "../../types/types";
 
-interface Props {
+interface IButtonProps {
    text: string;
    color?: colorType;
    size?: sizesType;
    icon?: iconType;
 }
 
-const Button = (props: Props) => {
+const Button = ({ text, color, size, icon }: IButtonProps) => {
    return (
-      <SButton color={props.color} size={props.size} icon={props.icon}>
-         {props.text}
-         {props.icon && <Sicon className="icon" icon={props.icon} />}
+      <SButton color={color} size={size} icon={icon}>
+         {text}
+         {icon && <SIcon className="icon" icon={icon} />}
       </SButton>
    );
 };
