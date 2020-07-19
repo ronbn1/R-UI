@@ -1,6 +1,6 @@
 import React from "react";
-import StyledTitle from "./Title-style";
-import { colorType, sizesType } from "../../types";
+import StyledTitle from "./style";
+import { colorType, sizesType } from "../../types/types";
 
 interface Props {
    text: string;

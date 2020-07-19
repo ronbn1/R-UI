@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colorType, sizesType } from "../../types";
+import { colorType, sizesType } from "../../types/types";
 import { colors, sizes } from "../../styles/utils";
 
 interface Props {
