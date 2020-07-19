@@ -13,7 +13,7 @@ const Button = ({ text, color, size, icon }: IButtonProps) => {
    return (
       <SButton color={color} size={size} icon={icon}>
          {text}
-         {icon && <SIcon className="icon" icon={icon} />}
+         {icon && <SIcon icon={icon} />}
       </SButton>
    );
 };

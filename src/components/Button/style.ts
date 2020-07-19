@@ -8,6 +8,22 @@ interface Props {
    size?: sizesType;
    icon?: iconType;
 }
+export const SIcon = styled.span`
+   background-size: cover;
+   display: inline-block;
+   position: relative;
+   left: 5px;
+   top: 2.5px;
+   width: 1rem;
+   height: 1rem;
+   background-color: ${(props: Props) =>
+      props.color
+         ? onlineTheme.colors[props.color]
+         : onlineTheme.colors.primary};
+   mask: ${(props: Props) =>
+      props.icon && `url(${onlineTheme.icons[props.icon]}) `};
+   mask-repeat: no-repeat;
+`;
 
 export const SButton: React.FunctionComponent<Props> = styled.button`
    border: transparent;
@@ -33,25 +49,8 @@ export const SButton: React.FunctionComponent<Props> = styled.button`
          props.color ? colors[props.color] : colors.primary};
       color: white;
       cursor: pointer;
-      .icon {
+      ${SIcon} {
          background-color: white;
       }
    }
-`;
-
-export const SIcon = styled.span`
-   background-size: cover;
-   display: inline-block;
-   position: relative;
-   left: 5px;
-   top: 2.5px;
-   width: 1rem;
-   height: 1rem;
-   background-color: ${(props: Props) =>
-      props.color
-         ? onlineTheme.colors[props.color]
-         : onlineTheme.colors.primary};
-   mask: ${(props: Props) =>
-      props.icon && `url(${onlineTheme.icons[props.icon]}) `};
-   mask-repeat: no-repeat;
 `;
