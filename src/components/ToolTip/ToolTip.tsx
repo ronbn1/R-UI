@@ -8,7 +8,7 @@ interface IToolTipPops {
    title?: string;
 }
 
-const ToolTip = ({ children, body, title, side }: IToolTipPops) => {
+const ToolTip = ({ children, body, title }: IToolTipPops) => {
    const [showToolTip, setShowToolTip] = useState(false);
    return (
       <>
