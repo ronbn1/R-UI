@@ -1,8 +1,8 @@
 import React from "react";
-import StyledTitle from "./style";
+import STitle from "./style";
 import { colorType, sizesType } from "../../types/types";
 
-interface Props {
+interface ITitleProps {
    text: string;
    color?: colorType;
    size?: sizesType;
@@ -10,16 +10,16 @@ interface Props {
    square?: colorType;
 }
 
-const Title = (props: Props) => {
+const Title = (props: ITitleProps) => {
    return (
-      <StyledTitle
+      <STitle
          underline={props.underline}
          size={props.size}
          color={props.color}
          square={props.square}
       >
          {props.text}
-      </StyledTitle>
+      </STitle>
    );
 };
 

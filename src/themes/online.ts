@@ -29,6 +29,11 @@ const onlineTheme: {
          bold: string;
       };
    };
+   sizes: {
+      s: string;
+      m: string;
+      l: string;
+   };
    colors: {
       secondary: string;
       success: string;
@@ -53,7 +58,7 @@ const onlineTheme: {
          small: "0.5rem",
          smallMedium: "0.7rem",
          smallMedium2: "0.8rem",
-         smallMedium3: "9rem",
+         smallMedium3: "0.9rem",
          medium: "1rem",
          medium2: "1.2rem",
          medium3: "1.3rem",
@@ -68,6 +73,11 @@ const onlineTheme: {
          regular: "400",
          bold: "600",
       },
+   },
+   sizes: {
+      s: "1rem",
+      m: "1.5rem",
+      l: "2rem",
    },
    colors: {
       secondary: "#3d5a80",

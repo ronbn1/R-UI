@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { colorType, sizesType } from "../../types/types";
-import { colors, sizes } from "../../styles/utils";
+import onlineTheme from "../../themes/online";
 
 interface Props {
    size?: sizesType;
@@ -9,14 +9,19 @@ interface Props {
    square?: colorType;
 }
 
-const StyledTitle: React.FunctionComponent<Props> = styled.h1`
-   font-size: ${(props: Props) => (props.size ? sizes[props.size] : "2rem")};
+const STitle: React.FunctionComponent<Props> = styled.h1`
+   font-size: ${(props: Props) =>
+      props.size ? onlineTheme.sizes[props.size] : "2rem"};
 
    border-bottom: ${(props: Props) =>
-      props.underline ? `1px solid ${colors[props.underline]}` : ""};
+      props.underline
+         ? `1px solid ${onlineTheme.colors[props.underline]}`
+         : ""};
 
    color: ${(props: Props) =>
-      props.color ? colors[props.color] : colors.primary};
+      props.color
+         ? onlineTheme.colors[props.color]
+         : onlineTheme.colors.primary};
 
    font-family: "Roboto", sans-serif;
    font-weight: 600;
@@ -33,10 +38,10 @@ const StyledTitle: React.FunctionComponent<Props> = styled.h1`
       left: -25px;
 
       background-color: ${(props: Props) =>
-         props.square ? `${colors[props.square]}` : ""};
+         props.square ? `${onlineTheme.colors[props.square]}` : ""};
 
       border-radius: 2px;
       transform: rotate(45deg) translateY(-50%);
    }
 `;
-export default StyledTitle;
+export default STitle;
