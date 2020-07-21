@@ -1,14 +1,20 @@
 import React, { useState } from "react";
 import { SToolTipContainer, SToolTip, Triangular, ToolTipTitle } from "./style";
-import { colorType, sizesType } from "../../types/types";
+import { Position } from "../../enums/toolTipPosition";
 
 interface IToolTipPops {
    children: React.ReactNode;
    body?: string;
    title?: string;
+   side?: Position;
 }
 
-const ToolTip = ({ children, body, title }: IToolTipPops) => {
+const ToolTip = ({
+   children,
+   body,
+   title,
+   side = Position.TOP_CENTER,
+}: IToolTipPops) => {
    const [showToolTip, setShowToolTip] = useState(false);
    return (
       <>
@@ -18,11 +24,11 @@ const ToolTip = ({ children, body, title }: IToolTipPops) => {
          >
             {showToolTip && (
                <>
-                  <SToolTip isTitle>
+                  <SToolTip isTitle side={side}>
                      {title && <ToolTipTitle>{title}</ToolTipTitle>}
                      <div className="body">{body}</div>
                   </SToolTip>
-                  <Triangular />
+                  <Triangular side={side} />
                </>
             )}
 

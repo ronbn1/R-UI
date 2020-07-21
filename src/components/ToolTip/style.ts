@@ -1,7 +1,11 @@
 import React from "react";
-
-import styled, { StyledComponent } from "styled-components";
+import styled, { StyledComponent, css } from "styled-components";
 import onlineTheme from "../../themes/online";
+import { Position } from "../../enums/toolTipPosition";
+import {
+   positionToolTip,
+   positionToolTipTriangular,
+} from "../../helpers/helpers";
 
 interface ISContainerProps {
    children: React.ReactNode;
@@ -12,11 +16,12 @@ interface ISContainerProps {
 interface ISToolTipProps {
    children?: React.ReactNode;
    isTitle?: boolean;
+   side: Position;
 }
 
 export const SToolTipContainer: StyledComponent<
    "div",
-   any,
+   ISContainerProps,
    {},
    never
 > = styled.div`
@@ -40,6 +45,12 @@ export const SToolTip: React.FunctionComponent<ISToolTipProps> = styled.div`
       font-size: ${onlineTheme.font.size.smallMedium2};
       padding: 0.3em;
    }
+
+   ${({ side }: ISToolTipProps) => {
+      return css`
+         ${positionToolTip(side)}
+      `;
+   }}
 `;
 
 export const Triangular: React.FunctionComponent<ISToolTipProps> = styled.div`
@@ -48,9 +59,11 @@ export const Triangular: React.FunctionComponent<ISToolTipProps> = styled.div`
    width: 0.8rem;
    height: 0.5rem;
    position: absolute;
-   left: 50%;
-   bottom: calc(120% - 0.4rem);
-   transform: translateX(-50%);
+   ${({ side }: ISToolTipProps) => {
+      return css`
+         ${positionToolTipTriangular(side)}
+      `;
+   }}
 `;
 
 export const ToolTipTitle: React.FunctionComponent = styled.div`
