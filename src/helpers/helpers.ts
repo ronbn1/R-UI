@@ -34,7 +34,7 @@ export const positionToolTip = (side: Position) => {
       case Position.RIGHT:
          return `
               top: 50%;
-              left: 130%;
+              left: 125%;
               transform: translateY(-50%);
               height: fit-content;
            `;

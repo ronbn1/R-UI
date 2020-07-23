@@ -88,7 +88,7 @@ export const Tooltip = () => {
                body=" I'm the tooltip with title"
                title="Title for tooltip"
             >
-               Right
+               RIGHT
             </ToolTip>{" "}
          </div>
          <div style={style}>
