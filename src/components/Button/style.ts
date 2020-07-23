@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { colorType, sizesType, iconType } from "../../types/types";
-import { sizes, colors } from "../../styles/utils";
 import onlineTheme from "../../themes/online";
 
 interface Props {
@@ -28,14 +27,17 @@ export const SIcon = styled.span`
 export const SButton: React.FunctionComponent<Props> = styled.button`
    border: transparent;
    color: ${(props: Props) =>
-      props.color ? colors[props.color] : colors.primary};
+      props.color
+         ? onlineTheme.colors[props.color]
+         : onlineTheme.colors.primary};
 
-   font-size: ${(props: Props) => (props.size ? sizes[props.size] : "")};
+   font-size: ${(props: Props) =>
+      props.size ? onlineTheme.sizes[props.size] : ""};
 
    border: ${(props: Props) =>
       props.color
-         ? `1px solid ${colors[props.color]}`
-         : `1px solid ${colors.primary}`};
+         ? `1px solid ${onlineTheme.colors[props.color]}`
+         : `1px solid ${onlineTheme.colors.primary}`};
 
    margin: 1rem;
    padding: 0.2rem 0.7rem;
@@ -46,7 +48,9 @@ export const SButton: React.FunctionComponent<Props> = styled.button`
 
    &:hover {
       background: ${(props: Props) =>
-         props.color ? colors[props.color] : colors.primary};
+         props.color
+            ? onlineTheme.colors[props.color]
+            : onlineTheme.colors.primary};
       color: white;
       cursor: pointer;
       ${SIcon} {
