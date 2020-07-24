@@ -1,11 +1,13 @@
 import React from "react";
 import Title from "./Title";
+import { jsxDecorator } from "storybook-addon-jsx";
 
 export default {
    title: "Title",
    component: Title,
    decorators: [
       (storyFn: any) => <div style={{ display: "flex" }}>{storyFn()}</div>,
+      jsxDecorator,
    ],
 };
 

@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import Modal from "./Modal";
-
+import { jsxDecorator } from "storybook-addon-jsx";
+import { Sizes, Position } from "../../enums";
 export default {
    title: "Modal",
    component: Modal,
+   decorators: [jsxDecorator],
 };
 
 export const ModelPopUp = () => {
    return (
       <>
          <Modal
-            trigger={<span style={{ margin: "3rem" }}>Open small modal</span>}
-            size="small"
+            size={Sizes.SMALL}
             title="Modal Title"
             body="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus quis corrupti unde aperiam nisi, harum libero sed id doloremque veritatis, recusandae animi nam accusantium voluptate est illo nesciunt praesentium enim?"
             button={["OK", "CANCEL"]}
@@ -19,11 +20,12 @@ export const ModelPopUp = () => {
                () => console.log("OK"),
                () => console.log("CANCEL"),
             ]}
-            buttonPosition="left"
-         />
+            buttonPosition={Position.LEFT}
+         >
+            <span style={{ margin: "3rem" }}>Open small modal</span>
+         </Modal>
          <Modal
-            trigger={<span style={{ margin: "3rem" }}>Open medium modal</span>}
-            size="medium"
+            size={Sizes.MEDIUM}
             title="Modal Title"
             body={[
                "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus quis corrupti unde aperiam nisi, harum libero sed id doloremque veritatis, recusandae animi nam accusantium voluptate est illo nesciunt praesentium enim?",
@@ -34,11 +36,12 @@ export const ModelPopUp = () => {
                () => console.log("OK"),
                () => console.log("CANCEL"),
             ]}
-            buttonPosition="right"
-         />
+            buttonPosition={Position.RIGHT}
+         >
+            <span style={{ margin: "3rem" }}>Open medium modal</span>
+         </Modal>
          <Modal
-            trigger={<span style={{ margin: "3rem" }}>Open large modal</span>}
-            size="medium"
+            size={Sizes.LARGE}
             title="Modal Title"
             body={[
                "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus quis corrupti unde aperiam nisi, harum libero sed id doloremque veritatis, recusandae animi nam accusantium voluptate est illo nesciunt praesentium enim?",
@@ -51,7 +54,9 @@ export const ModelPopUp = () => {
                () => console.log("CANCEL"),
                () => console.log("Help"),
             ]}
-         />
+         >
+            <span style={{ margin: "3rem" }}>Open large modal</span>
+         </Modal>
       </>
    );
 };

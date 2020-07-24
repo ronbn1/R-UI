@@ -4,27 +4,29 @@ import Title from "../Title/Title";
 import Button from "../Button/Button";
 import { colorType, sizesType } from "../../types/types";
 import onlineTheme from "../../themes/online";
-
+import { Sizes, Position } from "../../enums";
+import { POINT_CONVERSION_COMPRESSED } from "constants";
 interface IModalProps {
-   size?: "small" | "medium" | "large";
-   trigger: any;
+   size?: Sizes;
+   children: any;
    body: string | string[];
    title?: string;
    color?: colorType;
    button?: string | string[];
    onClickButton?: any;
-   buttonPosition?: "left" | "center" | "right";
+   buttonPosition?: Position.CENTER | Position.LEFT | Position.RIGHT;
 }
 
 const Modal = ({
-   size = "medium",
+   children,
    body,
    title,
    color,
    button,
    onClickButton,
-   trigger,
-   buttonPosition = "center",
+
+   size = Sizes.MEDIUM,
+   buttonPosition = Position.CENTER,
 }: IModalProps) => {
    const [isModalShow, setIsModalShow] = useState(false);
    const [fadeOut, setFadeOut] = useState(false);
@@ -43,7 +45,7 @@ const Modal = ({
                isModalShow ? setFadeOut(true) : setIsModalShow(true)
             }
          >
-            {trigger}
+            {children}
          </span>
          {isModalShow && (
             <>
@@ -83,6 +85,7 @@ const Modal = ({
                               (b, i) =>
                                  typeof onClickButton === "object" && (
                                     <Button
+                                       key={i}
                                        text={b}
                                        onClick={onClickButton[i]}
                                        color={color}

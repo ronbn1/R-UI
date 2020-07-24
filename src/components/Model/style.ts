@@ -1,15 +1,14 @@
 import styled, { keyframes, css } from "styled-components";
 import onlineTheme from "../../themes/online";
-
+import { Sizes, Position } from "../../enums";
 interface ISModal {
    show: boolean;
-   size?: "small" | "medium" | "large";
+   size?: Sizes;
    isFadeOut: boolean;
-   buttonPosition?: "left" | "center" | "right";
 }
 
 interface ISButtonContainer {
-   buttonPosition?: "left" | "center" | "right";
+   buttonPosition?: Position.LEFT | Position.RIGHT | Position.CENTER;
 }
 
 const fadeIn = keyframes`
@@ -52,7 +51,7 @@ export const SModal = styled.div<ISModal>`
 
    flex-direction: column;
    max-width: ${({ size }: ISModal) =>
-      size === "medium" ? "40%" : size === "small" ? "25%" : "50%"};
+      size === Sizes.MEDIUM ? "40%" : size === Sizes.SMALL ? "25%" : "50%"};
 
    position: absolute;
    top: 50%;
@@ -85,13 +84,13 @@ export const SBody = styled.div`
    }
 `;
 
-export const SBtnContainer = styled.div<buttonPosition>`
+export const SBtnContainer = styled.div<ISButtonContainer>`
    display: flex;
-   justify-content: ${({ buttonPosition }: buttonPosition) =>
-      buttonPosition === "left"
+   justify-content: ${({ buttonPosition }: ISButtonContainer) =>
+      buttonPosition === Position.LEFT
          ? "flex-start"
-         : buttonPosition === "right"
+         : buttonPosition === Position.RIGHT
          ? "flex-end"
-         : "center"};
+         : Position.CENTER};
    flex: 1;
 `;
