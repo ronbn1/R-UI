@@ -7,14 +7,17 @@ interface IButtonProps {
    color?: colorType;
    size?: sizesType;
    icon?: iconType;
+   onClick?: (arg: any) => any;
 }
 
-const Button = ({ text, color, size, icon }: IButtonProps) => {
+const Button = ({ text, color, size, icon, onClick }: IButtonProps) => {
    return (
-      <SButton color={color} size={size} icon={icon}>
-         {text}
-         {icon && <SIcon icon={icon} />}
-      </SButton>
+      <span onClick={onClick}>
+         <SButton color={color} size={size} icon={icon}>
+            {text}
+            {icon && <SIcon icon={icon} />}
+         </SButton>
+      </span>
    );
 };
 
