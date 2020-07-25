@@ -6,6 +6,7 @@ import heart from "../assets/heart-regular.svg";
 import plus from "../assets/plus-circle-solid.svg";
 import trash from "../assets/trash-solid.svg";
 import smile from "../assets/smile-regular.svg";
+import close from "../assets/times-circle-regular.svg";
 const onlineTheme: {
    font: {
       family: string;
@@ -50,6 +51,7 @@ const onlineTheme: {
       leftArrow: any;
       upArrow: any;
       smile: any;
+      close: any;
    };
 } = {
    font: {
@@ -87,14 +89,15 @@ const onlineTheme: {
       light: "#e0fbfc",
    },
    icons: {
-      plus: plus,
-      trash: trash,
-      heart: heart,
-      downArrow: downArrow,
-      rightArrow: rightArrow,
-      leftArrow: leftArrow,
-      upArrow: upArrow,
-      smile: smile,
+      plus,
+      trash,
+      heart,
+      downArrow,
+      rightArrow,
+      leftArrow,
+      upArrow,
+      smile,
+      close,
    },
 };
 export default onlineTheme;

@@ -1,9 +1,11 @@
 import React from "react";
 import Button from "./Button";
+import { jsxDecorator } from "storybook-addon-jsx";
 
 export default {
    title: "Button",
    component: Button,
+   decorators: [jsxDecorator],
 };
 
 export const TextButton = () => {

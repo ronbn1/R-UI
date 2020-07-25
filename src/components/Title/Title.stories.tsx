@@ -1,22 +1,34 @@
 import React from "react";
 import Title from "./Title";
+import { jsxDecorator } from "storybook-addon-jsx";
 
 export default {
    title: "Title",
    component: Title,
    decorators: [
       (storyFn: any) => <div style={{ display: "flex" }}>{storyFn()}</div>,
+      jsxDecorator,
    ],
 };
 
 export const title = () => {
    return (
       <>
-         <Title text="Hello World" />
-         <Title text="Hello World" color="secondary" />
-         <Title text="Hello World" color="success" />
-         <Title text="Hello World" color="dark" />
-         <Title text="Hello World" color="light" />
+         <span style={{ padding: "2rem" }}>
+            <Title text="Hello World" />
+         </span>
+         <span style={{ padding: "2rem" }}>
+            <Title text="Hello World" color="secondary" />
+         </span>
+         <span style={{ padding: "2rem" }}>
+            <Title text="Hello World" color="success" />
+         </span>
+         <span style={{ padding: "2rem" }}>
+            <Title text="Hello World" color="dark" />
+         </span>
+         <span style={{ padding: "2rem" }}>
+            <Title text="Hello World" color="light" />
+         </span>
       </>
    );
 };
@@ -24,11 +36,21 @@ export const title = () => {
 export const titleWithUnderline = () => {
    return (
       <>
-         <Title text="Hello World" color="secondary" underline="secondary" />
-         <Title text="Hello World" color="secondary" underline="success" />
-         <Title text="Hello World" color="secondary" underline="primary" />
-         <Title text="Hello World" color="secondary" underline="dark" />
-         <Title text="Hello World" color="secondary" underline="light" />
+         <span style={{ padding: "2rem" }}>
+            <Title text="Hello World" color="secondary" underline="secondary" />
+         </span>
+         <span style={{ padding: "2rem" }}>
+            <Title text="Hello World" color="secondary" underline="success" />
+         </span>
+         <span style={{ padding: "2rem" }}>
+            <Title text="Hello World" color="secondary" underline="primary" />
+         </span>
+         <span style={{ padding: "2rem" }}>
+            <Title text="Hello World" color="secondary" underline="dark" />
+         </span>
+         <span style={{ padding: "2rem" }}>
+            <Title text="Hello World" color="secondary" underline="light" />
+         </span>
       </>
    );
 };
@@ -36,11 +58,22 @@ export const titleWithUnderline = () => {
 export const decoratedTitle = () => {
    return (
       <>
-         <Title text="Hello World" color="secondary" square="secondary" />
-         <Title text="Hello World" color="secondary" square="success" />
-         <Title text="Hello World" color="secondary" square="primary" />
-         <Title text="Hello World" color="secondary" square="dark" />
-         <Title text="Hello World" color="secondary" square="light" />
+         {" "}
+         <span style={{ padding: "2rem" }}>
+            <Title text="Hello World" color="secondary" square="secondary" />
+         </span>
+         <span style={{ padding: "2rem" }}>
+            <Title text="Hello World" color="secondary" square="success" />
+         </span>
+         <span style={{ padding: "2rem" }}>
+            <Title text="Hello World" color="secondary" square="primary" />
+         </span>
+         <span style={{ padding: "2rem" }}>
+            <Title text="Hello World" color="secondary" square="dark" />
+         </span>
+         <span style={{ padding: "2rem" }}>
+            <Title text="Hello World" color="secondary" square="light" />
+         </span>
       </>
    );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import ToolTip from "./ToolTip";
 import { Position } from "../../enums/toolTipPosition";
+import { jsxDecorator } from "storybook-addon-jsx";
 
 const style = { padding: "1rem" };
 export default {
@@ -17,6 +18,7 @@ export default {
             {storyFn()}
          </div>
       ),
+      jsxDecorator,
    ],
 };
 

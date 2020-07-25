@@ -7,4 +7,5 @@ export enum Position {
    BOTTOM_LEFT = "bottomLeft",
    RIGHT = "right",
    LEFT = "left",
+   CENTER = "center",
 }
