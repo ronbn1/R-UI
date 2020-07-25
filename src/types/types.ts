@@ -8,4 +8,5 @@ export type iconType =
    | "rightArrow"
    | "leftArrow"
    | "upArrow"
-   | "smile";
+   | "smile"
+   | "close";
