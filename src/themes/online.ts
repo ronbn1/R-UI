@@ -7,6 +7,7 @@ import plus from "../assets/plus-circle-solid.svg";
 import trash from "../assets/trash-solid.svg";
 import smile from "../assets/smile-regular.svg";
 import close from "../assets/times-circle-regular.svg";
+import { Colors } from "../enums";
 const onlineTheme: {
    font: {
       family: string;
