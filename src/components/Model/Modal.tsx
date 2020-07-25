@@ -45,7 +45,7 @@ const Modal = ({
                isModalShow ? setFadeOut(true) : setIsModalShow(true)
             }
          >
-            {children}
+            <span style={{ cursor: "pointer" }}>{children}</span>
          </span>
          {isModalShow && (
             <>

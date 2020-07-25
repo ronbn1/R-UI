@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { SToolTipContainer, SToolTip, Triangular, ToolTipTitle } from "./style";
-import { Position } from "../../enums/toolTipPosition";
+import { Position } from "../../enums";
 
 interface IToolTipPops {
    children: React.ReactNode;
