@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Drawer from "./Drawer";
 import { jsxDecorator } from "storybook-addon-jsx";
-import Item from "./Item/Item";
 import onlineTheme from "../../themes/online";
 export default {
    title: "Drawer",
@@ -14,11 +13,16 @@ export const DrawerNav = () => {
    const trigger = <Trigger>OPEN DRAWER</Trigger>;
    return (
       <>
-         <Drawer trigger={trigger} color="secondary" title="My Drawer">
-            <Item label="first link" icon={onlineTheme.icons.heart} />
-            <Item label="first link" icon={onlineTheme.icons.plus} />
-            <Item label="first link" icon={onlineTheme.icons.smile} />
-            <Item label="first link" icon={onlineTheme.icons.trash} />
+         <Drawer
+            backdropBg={true}
+            trigger={trigger}
+            color="secondary"
+            title="My Drawer"
+         >
+            <Drawer.Item label="first link" icon={onlineTheme.icons.heart} />
+            <Drawer.Item label="first link" icon={onlineTheme.icons.plus} />
+            <Drawer.Item label="first link" icon={onlineTheme.icons.smile} />
+            <Drawer.Item label="first link" icon={onlineTheme.icons.trash} />
          </Drawer>
       </>
    );

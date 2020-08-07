@@ -7,6 +7,12 @@ import plus from "../assets/plus-circle-solid.svg";
 import trash from "../assets/trash-solid.svg";
 import smile from "../assets/smile-regular.svg";
 import close from "../assets/times-circle-regular.svg";
+import doc from "../assets/file-alt-solid.svg";
+import bell from "../assets/bell-solid.svg";
+import conf from "../assets/cog-solid.svg";
+import decrease from "../assets/decrease-arrow.svg";
+import increase from "../assets/increase-arrow.svg";
+import leftDownArrow from "../assets/left-down-arrow.svg";
 import { Colors } from "../enums";
 const onlineTheme: {
    font: {
@@ -32,6 +38,7 @@ const onlineTheme: {
       };
    };
    sizes: {
+      xs: string;
       s: string;
       m: string;
       l: string;
@@ -40,8 +47,10 @@ const onlineTheme: {
       secondary: string;
       success: string;
       dark: string;
+      darker: string;
       primary: string;
       light: string;
+      selected: string;
    };
    icons: {
       plus: any;
@@ -53,6 +62,12 @@ const onlineTheme: {
       upArrow: any;
       smile: any;
       close: any;
+      doc: any;
+      bell: any;
+      conf: any;
+      decrease: any;
+      increase: any;
+      leftDownArrow: any;
    };
 } = {
    font: {
@@ -78,6 +93,7 @@ const onlineTheme: {
       },
    },
    sizes: {
+      xs: "0.8rem",
       s: "1rem",
       m: "1.5rem",
       l: "2rem",
@@ -85,9 +101,11 @@ const onlineTheme: {
    colors: {
       secondary: "#3d5a80",
       success: "#3bceac",
-      dark: "#293241",
+      dark: "#152945",
+      darker: "#171138",
       primary: "#ee6c4d",
       light: "#e0fbfc",
+      selected: "#152844",
    },
    icons: {
       plus,
@@ -99,6 +117,12 @@ const onlineTheme: {
       upArrow,
       smile,
       close,
+      doc,
+      conf,
+      bell,
+      decrease,
+      increase,
+      leftDownArrow,
    },
 };
 export default onlineTheme;

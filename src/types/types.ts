@@ -1,5 +1,5 @@
 export type colorType = "primary" | "success" | "secondary" | "dark" | "light";
-export type sizesType = "s" | "m" | "l";
+export type sizesType = "xs" | "s" | "m" | "l";
 export type iconType =
    | "plus"
    | "trash"
@@ -9,4 +9,10 @@ export type iconType =
    | "leftArrow"
    | "upArrow"
    | "smile"
-   | "close";
+   | "close"
+   | "doc"
+   | "conf"
+   | "bell"
+   | "leftDownArrow"
+   | "increase"
+   | "decrease";

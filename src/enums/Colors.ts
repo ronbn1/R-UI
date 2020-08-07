@@ -3,5 +3,7 @@ export enum Colors {
    SECONDARY = "secondary",
    SUCCESS = "success",
    DARK = "dark",
+   DARKER = "darker",
    LIGHT = "light",
+   SELECTED = "selected",
 }

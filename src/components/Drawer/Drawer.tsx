@@ -9,6 +9,7 @@ import Backdrop from "../Backdrop/Backdrop";
 import { SIcon } from "../Button/style";
 import Item from "./Item/Item";
 import { SItemContainer } from "./Item/style";
+
 interface IDrawerProps {
    trigger: any;
    drawerWith?: Sizes;
@@ -16,6 +17,7 @@ interface IDrawerProps {
    closeBtnColor?: colorType;
    title?: string;
    children?: any;
+   backdropBg?: boolean;
 }
 
 const Drawer = ({
@@ -25,6 +27,7 @@ const Drawer = ({
    closeBtnColor,
    title,
    children,
+   backdropBg = false,
 }: IDrawerProps) => {
    const [isShown, setIsShown] = useState(false);
    const [isFadeOut, setIsFadeOut] = useState(false);
@@ -47,7 +50,12 @@ const Drawer = ({
          </span>
          {isShown && (
             <>
-               <Backdrop closeFn={closeFn} opacity={0.05} timer={0.3} />
+               <Backdrop
+                  bg={backdropBg}
+                  closeFn={closeFn}
+                  opacity={0.05}
+                  timer={0.3}
+               />
                {console.log(color)}
                <SDrawer
                   drawerWith={drawerWith}
@@ -74,5 +82,5 @@ const Drawer = ({
       </>
    );
 };
-
+Drawer.Item = Item;
 export default Drawer;

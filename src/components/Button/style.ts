@@ -39,7 +39,7 @@ export const SButton: React.FunctionComponent<Props> = styled.button`
          ? `1px solid ${onlineTheme.colors[props.color]}`
          : `1px solid ${onlineTheme.colors.primary}`};
 
-   margin: 1rem;
+   margin: 0.2rem;
    padding: 0.2rem 0.7rem;
    background-color: transparent;
    border-radius: 3px;

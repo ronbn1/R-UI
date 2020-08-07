@@ -1,9 +1,10 @@
-import styled, { keyframes, css } from "styled-components";
+import styled, { keyframes, css, StyledComponent } from "styled-components";
 
 interface ISBackdropProps {
    isFadeOut: boolean;
    opacity?: number;
    timer?: number;
+   bg?: boolean;
 }
 const fadeIn = keyframes`
 from{
@@ -22,16 +23,32 @@ to {
     opacity:0
 }
 `;
-export const SBackdrop = styled.div`
+export const SBackdrop: StyledComponent<
+   "div",
+   any,
+   ISBackdropProps,
+   never
+> = styled.div`
    position: absolute;
    top: 0;
    left: 0;
-   background-color: rgba(
-      0,
-      0,
-      0,
-      ${({ opacity }: ISBackdropProps) => opacity}
-   );
+   z-index: -1;
+
+   ${({ bg }: ISBackdropProps) => {
+      return bg
+         ? css`
+              background-color: rgba(
+                 0,
+                 0,
+                 0,
+                 ${({ opacity }: ISBackdropProps) => opacity}
+              );
+           `
+         : css`
+              background-color: transparent;
+           `;
+   }}
+
    height: 100%;
    width: 100%;
    animation: ${fadeIn} ${({ timer }: ISBackdropProps) => timer}s;

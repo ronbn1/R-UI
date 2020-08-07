@@ -5,12 +5,19 @@ interface IBackdropProps {
    closeFn: () => any;
    opacity?: number;
    timer?: number;
+   bg?: boolean;
 }
 
-const Backdrop = ({ closeFn, opacity = 0.05, timer = 0.2 }: IBackdropProps) => {
+const Backdrop = ({
+   closeFn,
+   opacity = 0.05,
+   timer = 0.2,
+   bg = false,
+}: IBackdropProps) => {
    const [isFadeOut, setIsFadeOut] = useState(false);
    return (
       <SBackdrop
+         bg={bg}
          onClick={() => {
             setIsFadeOut(true);
             closeFn();
