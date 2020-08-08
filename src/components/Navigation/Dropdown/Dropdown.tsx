@@ -11,8 +11,8 @@ interface IDropdownProps {
    children?: any;
 }
 const Dropdown = ({ children }: IDropdownProps) => {
-   const toggle = children.filter((c) => c.type.name === "Toggle");
-   const menu = children.filter((c) => c.type.name === "Menu");
+   const toggle = children.filter((c: any) => c.type.name === "Toggle");
+   const menu = children.filter((c: any) => c.type.name === "Menu");
    const [isShown, setIsShown] = useState(false);
    return (
       <>

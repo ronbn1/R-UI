@@ -5,7 +5,6 @@ import Button from "../Button/Button";
 import { colorType, sizesType } from "../../types/types";
 import onlineTheme from "../../themes/online";
 import { Sizes, Position } from "../../enums";
-import { POINT_CONVERSION_COMPRESSED } from "constants";
 interface IModalProps {
    size?: Sizes;
    children: any;

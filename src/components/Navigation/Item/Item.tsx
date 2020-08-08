@@ -13,7 +13,8 @@ const Item = ({ label, icon, iconSize, active = false }: Props) => {
       <>
          <SItem active={active}>
             <div className="selectedLine" />
-            <SIcon color={Colors.LIGHT} icon={icon} size={iconSize} />
+            {icon && <SIcon color={Colors.LIGHT} icon={icon} size={iconSize} />}
+
             <SLabel>{label}</SLabel>
          </SItem>
       </>
