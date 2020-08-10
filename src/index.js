@@ -7,6 +7,6 @@ export { default as Icon } from "./components/Icon/Icon";
 export { default as ToolTip } from "./components/ToolTip/ToolTip";
 export { default as Dropdown } from "./components/Navigation/Dropdown/Dropdown";
 export { default as SideNav } from "./components/Navigation/SideNav/SideNav";
-export { default as Item } from "./components/Navigation/Item/Item";
 export { default as NavBar } from "./components/Navigation/NavBar/NavBar";
 export { default as Modal } from "./components/Model/Modal";
+//# sourceMappingURL=index.js.map

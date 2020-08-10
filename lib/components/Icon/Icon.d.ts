@@ -1,8 +1,7 @@
 /// <reference types="react" />
-import { iconType } from "../../types/types";
 import { Colors, Sizes } from "../../enums/";
 interface Props {
-    icon: iconType;
+    icon: any;
     iconSize?: Sizes;
     active?: boolean;
     color?: Colors;

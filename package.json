@@ -1,29 +1,28 @@
 {
   "name": "rb-ui",
-  "version": "2.3.0",
-  "main": "lib/index.js",
+  "version": "1.0.5",
+  "main": "lib/index.d.js",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
   "private": false,
+  "files": [
+    "lib"
+  ],
   "publishConfig": {
     "access": "public",
-    "tag": "prerelease"
+    "tag": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ronbn1/R-UI.git"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rollup -c",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public",
-    "build:lib": "npm run build:babel && npm run build:types && node ./scripts/copyTS.js",
-    "build:babel": "concurrently \"npm run build:babel:esm && npm run build:babel:umd\" \"npm run build:babel:cjs\"",
-    "build:babel:cjs": "SET BABEL_ENV=cjs babel --source-maps --extensions \".js,.ts,.tsx\" src --out-dir dist/js --presets=@babel/env",
-    "build:babel:esm": "SET BABEL_ENV=esm babel --source-maps --extensions \".js,.ts,.tsx\" src --out-dir dist/esm",
-    "build:babel:umd": "SET BABEL_ENV=umd babel --source-maps --extensions \".js\" dist/esm --out-dir dist/umd --plugins=transform-es2015-modules-umd",
-    "build:types": "tsc -p tsconfig.gen-dts.json",
-    "clean": "rimraf dist",
-    "develop": "npm run build:types && npm run build:babel:esm --skip-initial-build --watch --verbose"
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -60,25 +59,32 @@
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/plugin-proposal-export-default-from": "^7.10.4",
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-image": "^2.0.5",
+    "@rollup/plugin-node-resolve": "^8.4.0",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-links": "^5.3.19",
     "@storybook/addons": "^5.3.19",
     "@storybook/preset-create-react-app": "^3.1.4",
     "@storybook/react": "^5.3.19",
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
     "babel-loader": "^8.1.0",
     "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
-    "@types/react-dom": "^16.9.8",
     "babel-plugin-typescript-to-proptypes": "^1.4.0",
     "concurrently": "^5.3.0",
     "css-loader": "^4.2.1",
     "prop-types": "^15.7.2",
-    "storybook-addon-jsx": "^7.3.3",
-    "style-loader": "^1.2.1",
-    "url-loader": "^4.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "@types/react": "^16.9.43",
-    "typescript": "^3.7.5"
+    "rollup": "^2.23.1",
+    "rollup-plugin-peer-deps-external": "^2.2.3",
+    "rollup-plugin-terser": "^6.1.0",
+    "rollup-plugin-typescript2": "^0.27.2",
+    "storybook-addon-jsx": "^7.3.3",
+    "style-loader": "^1.2.1",
+    "typescript": "^3.9.7",
+    "url-loader": "^4.1.0"
   }
 }
