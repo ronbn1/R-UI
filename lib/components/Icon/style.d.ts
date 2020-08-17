@@ -1,10 +1,11 @@
 import { StyledComponent } from "styled-components";
-import { iconType } from "../../types/types";
+import { colorType, iconType } from "../../types/types";
 import { Sizes, Colors } from "../../enums/";
 interface ISIconProps {
-    color?: Colors;
-    icon: iconType;
+    color?: Colors | colorType;
+    icon?: iconType;
     size?: Sizes;
+    svg?: string;
 }
 export declare const SIcon: StyledComponent<"div", any, ISIconProps, never>;
 export {};

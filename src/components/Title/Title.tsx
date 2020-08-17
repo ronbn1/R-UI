@@ -9,6 +9,7 @@ interface ITitleProps {
    underline?: colorType;
    square?: colorType;
    align?: string;
+   style?: any;
 }
 
 const Title = (props: ITitleProps) => {
@@ -19,6 +20,7 @@ const Title = (props: ITitleProps) => {
          color={props.color}
          square={props.square}
          align={props.align}
+         style={{ ...props.style }}
       >
          {props.text}
       </STitle>

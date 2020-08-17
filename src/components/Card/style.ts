@@ -7,6 +7,7 @@ import Title from "../Title/Title";
 
 interface ISCard {
    width?: Sizes;
+   borderColor?: string;
 }
 
 interface ISBody {}
@@ -38,7 +39,8 @@ export const SCard: StyledComponent<"div", any, ISCard, never> = styled.div`
          : width === Sizes.SMALL
          ? "15rem"
          : "10rem"};
-   border: 1px solid #00000050;
+   border: ${({ borderColor }: ISCard) =>
+      borderColor ? `1px solid ${borderColor}` : `1px solid #eeeeee`};
    border-radius: 8px;
 `;
 

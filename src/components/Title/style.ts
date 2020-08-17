@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css, StyledComponent } from "styled-components";
 import { colorType, sizesType } from "../../types/types";
 import onlineTheme from "../../themes/online";
 
@@ -8,9 +8,10 @@ interface Props {
    color?: colorType;
    square?: colorType;
    align?: string;
+   style?: any;
 }
 
-const STitle: React.FunctionComponent<Props> = styled.h1`
+const STitle: StyledComponent<"h1", any, Props, never> = styled.h1`
    font-size: ${(props: Props) =>
       props.size ? onlineTheme.sizes[props.size] : "2rem"};
    text-align: ${(props: Props) => props.align && props.align};

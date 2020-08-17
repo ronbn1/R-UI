@@ -18,7 +18,7 @@ export const SideNavBar = () => {
             label="ITEM 1"
             active={true}
             icon="plus"
-            iconSize={Sizes.SMALL}
+            iconSize={Sizes.MEDIUM}
          />
          <Item label="ITEM 2" icon="plus" iconSize={Sizes.MEDIUM} />
          <Item label="ITEM 3" icon="plus" iconSize={Sizes.MEDIUM} />

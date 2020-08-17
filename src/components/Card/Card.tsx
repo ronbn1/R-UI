@@ -19,6 +19,7 @@ interface ICardProps {
    children?: any;
    width?: Sizes;
    style?: {};
+   borderColor?: string;
 }
 interface IBodyProps {
    children: any;
@@ -54,9 +55,9 @@ interface ITopIcon {
    icon?: iconType;
    color?: Colors;
 }
-const Card = ({ children, width, style = {} }: ICardProps) => {
+const Card = ({ children, width, style = {}, borderColor }: ICardProps) => {
    return (
-      <SCard width={width} style={{ ...style }}>
+      <SCard width={width} style={{ ...style }} borderColor={borderColor}>
          <GlobalStyle />
          {children}
       </SCard>

@@ -6,6 +6,7 @@ interface IButtonProps {
     size?: sizesType;
     icon?: iconType;
     onClick?: (arg: any) => any;
+    svg?: string;
 }
-declare const Button: ({ text, color, size, icon, onClick }: IButtonProps) => JSX.Element;
+declare const Button: ({ text, color, size, icon, onClick, svg }: IButtonProps) => JSX.Element;
 export default Button;

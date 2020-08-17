@@ -10,3 +10,4 @@ export { default as SideNav } from "./components/Navigation/SideNav/SideNav";
 export { default as Item } from "./components/Navigation/Item/Item";
 export { default as NavBar } from "./components/Navigation/NavBar/NavBar";
 export { default as Modal } from "./components/Model/Modal";
+export { Colors } from "./enums/Colors";

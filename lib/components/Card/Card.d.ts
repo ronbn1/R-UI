@@ -5,6 +5,7 @@ interface ICardProps {
     children?: any;
     width?: Sizes;
     style?: {};
+    borderColor?: string;
 }
 interface IBodyProps {
     children: any;
@@ -41,7 +42,7 @@ interface ITopIcon {
     color?: Colors;
 }
 declare const Card: {
-    ({ children, width, style }: ICardProps): JSX.Element;
+    ({ children, width, style, borderColor }: ICardProps): JSX.Element;
     Body: ({ children, style }: IBodyProps) => JSX.Element;
     Title: ({ children, size, color, style }: ITitleProps) => JSX.Element;
     Subtitle: ({ children, size, color, style }: ISubtitleProps) => JSX.Element;

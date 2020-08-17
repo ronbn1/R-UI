@@ -3,16 +3,20 @@ import { SIcon } from "./style";
 import { iconType } from "../../types/types";
 import { Colors, Sizes } from "../../enums/";
 interface Props {
-   icon: any;
+   icon?: iconType;
    iconSize?: Sizes;
    active?: boolean;
    color?: Colors;
+   svg?: string;
 }
-const Icon = ({ color, icon, iconSize, active = false }: Props) => {
+const Icon = ({ color, icon, iconSize, active = false, svg }: Props) => {
    return (
       <>
-         {console.log("ron benaish")}
-         <SIcon color={color} icon={icon} size={iconSize} />
+         {icon ? (
+            <SIcon color={color} icon={icon} size={iconSize} />
+         ) : (
+            <SIcon color={color} svg={svg} size={iconSize} />
+         )}
       </>
    );
 };

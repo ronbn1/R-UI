@@ -4,9 +4,10 @@ import { Sizes, Colors } from "../../enums/";
 import onlineTheme from "../../themes/online";
 
 interface ISIconProps {
-   color?: Colors;
-   icon: iconType;
+   color?: Colors | colorType;
+   icon?: iconType;
    size?: Sizes;
+   svg?: string;
 }
 
 export const SIcon: StyledComponent<
@@ -34,6 +35,8 @@ export const SIcon: StyledComponent<
          ? onlineTheme.colors[props.color]
          : onlineTheme.colors.primary};
    mask: ${(props: ISIconProps) =>
-      props.icon && `url(${onlineTheme.icons[props.icon]}) `};
+      props.icon
+         ? `url(${onlineTheme.icons[props.icon]}) `
+         : `url(${props.svg}) `};
    mask-repeat: no-repeat;
 `;

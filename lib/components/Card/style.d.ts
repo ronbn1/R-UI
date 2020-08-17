@@ -3,6 +3,7 @@ import { colorType, sizesType } from "../../types/types";
 import { Sizes } from "../../enums";
 interface ISCard {
     width?: Sizes;
+    borderColor?: string;
 }
 interface ISBody {
 }

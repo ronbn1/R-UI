@@ -9,4 +9,6 @@ export { default as Dropdown } from "./components/Navigation/Dropdown/Dropdown";
 export { default as SideNav } from "./components/Navigation/SideNav/SideNav";
 export { default as NavBar } from "./components/Navigation/NavBar/NavBar";
 export { default as Modal } from "./components/Model/Modal";
+export { Colors } from "./enums/Colors";
+
 //# sourceMappingURL=index.js.map

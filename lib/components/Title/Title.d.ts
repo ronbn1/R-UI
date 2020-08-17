@@ -7,6 +7,7 @@ interface ITitleProps {
     underline?: colorType;
     square?: colorType;
     align?: string;
+    style?: any;
 }
 declare const Title: (props: ITitleProps) => JSX.Element;
 export default Title;

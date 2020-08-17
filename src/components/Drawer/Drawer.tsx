@@ -6,7 +6,7 @@ import { colorType, sizesType } from "../../types/types";
 import onlineTheme from "../../themes/online";
 import { Sizes, Position } from "../../enums";
 import Backdrop from "../Backdrop/Backdrop";
-import { SIcon } from "../Button/style";
+import { SIcon } from "../Icon/style";
 import Item from "./Item/Item";
 import { SItemContainer } from "./Item/style";
 

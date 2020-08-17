@@ -1,6 +1,6 @@
 {
   "name": "rb-ui",
-  "version": "1.0.5",
+  "version": "1.0.13",
   "main": "lib/index.d.js",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",

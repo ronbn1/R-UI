@@ -21,7 +21,15 @@ export const TopNavBar = () => {
          }}
       >
          <GlobalStyle />
-         <NavBar title="Title" icon={["doc", "conf", "bell"]} />;
+         <NavBar
+            title="Title"
+            icon={[
+               onlineTheme.icons.close,
+               onlineTheme.icons.close,
+               onlineTheme.icons.close,
+            ]}
+         />
+         ;
       </div>
    );
 };
